@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg height="800" width="1200"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:svg="http://www.w3.org/2000/svg">
+	<!-- Some models to be used -->
+	<defs>
+		<mask id='emptycircle'>
+			<rect x='0' y='0' width='100' height='100'
+				fill='white' />
+			<circle r='40' cx='40' cy='40' fill='black'/>
+		</mask>
+		<polygon id='valvula_simples'
+			style='fill:white;stroke:black;stroke-width:3'
+			points='0,0 0,30 30,0 30,30' />
+		<g id='valvula_proporcional'>
+			<path
+				style='fill:none;stroke:black;stroke-width:3'
+				d='M15 15 L15 -8 M0 -8 L30 -8 Q 15 -38 0 -8 L15 -8' />
+			<use x='0' y='0' href='#valvula_simples' />
+		</g>
+		<polygon id='seta_direita'
+			points='5,0 -5,-10 -5,10' />
+	</defs>
+	<!-- Main pipes -->
+	<g id='linhas'>
+		<polyline id='antes-bomba'
+			points='0,600 20,600 20,540 140,540'
+			style='fill:none;stroke:black;stroke-width:3' />
+		<use href='#seta_direita' x='140' y='540' />
+		<polyline id='bomba-torre'
+			points='140,500 300,500 300,450 400,450'
+			style='fill:none;stroke:black;stroke-width:3' />
+		<use href='#seta_direita' x='395' y='450' />
+		<polyline id='tanque-valvula'
+			points='550,450 650,450'
+			style='fill:none;stroke:black;stroke-width:3' />
+		<polyline id='pos-valvula'
+			points='680,450 800,450 800,500'
+			style='fill:none;stroke:black;stroke-width:3' />
+	</g>
+	<!-- Main elements -->
+	<use id='HV-prebomba' href='#valvula_simples' 
+		x='200' y='485' />
+	<g id='bomba' transform='translate(100, 500)'>
+		<text x='30' y='120'>B01</text>
+		<circle cx="40" cy="40" r='40' fill='none'
+			stroke='black' stroke-width='3'/>
+		<polyline points='0,90 40,40 80,90 0,90'
+			style='fill:none;stroke:black;stroke-width:3' 
+			mask='url(#emptycircle)'/>
+	</g>
+	<use id='HV-posbomba' href='#valvula_simples' 
+		x='60' y='525' />
+	<g id='torre' transform='translate(400,370)'>
+		<rect width='150' height='100' rx='20' ry='20'
+			style='fill:none;stroke-width:3;stroke:black' />
+		<text x='65' y='45'>
+			VA
+			<tspan x='60' y='60'>322</tspan>
+		</text>
+	</g>
+	<use href='#valvula_proporcional' x='650' y='435' />
+	<use id='HV-prevalvula' href='#valvula_simples' 
+		x='600' y='435' />
+	<use id='HV-posvalvula' href='#valvula_simples' 
+		x='700' y='435' />
+	<!-- Secondary pipes -->
+	<polyline id='lit-torre'
+		points='340,330 340,400 400,400 260,400 260,420'
+		style='fill:none;stroke:black;stroke-width:3' />
+	<!-- Secondary Elements -->
+	<g id="LT-06022" transform="translate(300, 250)">
+		<circle cx="40" cy="40" r="40" stroke="black"
+			stroke-width="3" fill='none' />
+		<text x="30" y="35">
+			LIT
+			<tspan x="28" y="55">601</tspan>
+		</text>
+	</g>
+	<use id='HV-lit-torre' href='#valvula_simples' 
+			x='300' y='385' />
+	<use id='HV-lit-torre' href='#valvula_simples' 
+			x='350' y='385' />
+</svg>
