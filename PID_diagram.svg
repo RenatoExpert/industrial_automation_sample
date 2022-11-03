@@ -74,12 +74,24 @@
 		points='400,190 140,190, 140,505'
 		stroke-dasharray='10,10'
 		style='fill:none;stroke:black;stroke-width:3' />
-	<polyline id='ly-valve'
+	<polyline id='fy-valve'
 		points='665,340 665,415'
 		style='fill:none;stroke:black;stroke-width:3' />
-	<path id='ly-valve-pneumatic'
+	<path id='fy-valve-pneumatic'
 		d='M650 360 L680 350	M650 370 L680 360
 		M650 390 L680 380	M650 400 L680 390'
+		style='fill:none;stroke:black;stroke-width:3' />
+	<polyline id='fy-lic'
+		points='665,260 665,190 480,190'
+		stroke-dasharray='10,10'
+		style='fill:none;stroke:black;stroke-width:3' />
+	<polyline id='lic-ft'
+		points='440,150 440,100 840,100 840,260'
+		stroke-dasharray='10,10'
+		style='fill:none;stroke:black;stroke-width:3' />
+	<path id='fy-valve'
+		d='	M780 450 L780 300 L800 300
+			M900 450 L900 300 L880 300'
 		style='fill:none;stroke:black;stroke-width:3' />
 	<!-- Secondary Elements -->
 	<g id="LIT" transform="translate(300, 250)">
@@ -102,12 +114,28 @@
 			<tspan x="28" y="55">601</tspan>
 		</text>
 	</g>
-	<g id="LY" transform="translate(625, 260)">
+	<g id="FY" transform="translate(625, 260)">
 		<circle cx="40" cy="40" r="40" stroke="black"
 			stroke-width="3" fill='none' />
 		<text x="30" y="35">
-			LY
+			FY
 			<tspan x="28" y="55">601</tspan>
 		</text>
+	</g>
+	<g id="FIT" transform="translate(800, 260)">
+		<circle cx="40" cy="40" r="40" stroke="black"
+			stroke-width="3" fill='none' />
+		<text x="30" y="35">
+			FIT
+			<tspan x="28" y="55">601</tspan>
+		</text>
+	</g>
+	<g id='fe'>
+		<rect x='830' y='430' fill='white'
+			width='20' height='40' />
+		<path
+			d='	M830 470 L830 430
+				M850 470 L850 430'
+			style='fill:none;stroke:black;stroke-width:3' />
 	</g>
 </svg>
