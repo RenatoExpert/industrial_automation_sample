@@ -32,11 +32,8 @@
 			points='140,500 300,500 300,450 400,450'
 			style='fill:none;stroke:black;stroke-width:3' />
 		<use href='#seta_direita' x='395' y='450' />
-		<polyline id='tanque-valvula'
-			points='550,450 650,450'
-			style='fill:none;stroke:black;stroke-width:3' />
-		<polyline id='pos-valvula'
-			points='680,450 800,450 800,500'
+		<polyline id='pip-valvula'
+			points='550, 450 1000,450 1000,500'
 			style='fill:none;stroke:black;stroke-width:3' />
 	</g>
 	<!-- Main elements -->
@@ -69,8 +66,23 @@
 	<polyline id='lit-torre'
 		points='340,330 340,400 400,400 260,400 260,420'
 		style='fill:none;stroke:black;stroke-width:3' />
+	<polyline id='lic-lit'
+		points='440,230 440,290, 380,290'
+		stroke-dasharray='10,10'
+		style='fill:none;stroke:black;stroke-width:3' />
+	<polyline id='lic-bomb'
+		points='400,190 140,190, 140,505'
+		stroke-dasharray='10,10'
+		style='fill:none;stroke:black;stroke-width:3' />
+	<polyline id='ly-valve'
+		points='665,340 665,415'
+		style='fill:none;stroke:black;stroke-width:3' />
+	<path id='ly-valve-pneumatic'
+		d='M650 360 L680 350	M650 370 L680 360
+		M650 390 L680 380	M650 400 L680 390'
+		style='fill:none;stroke:black;stroke-width:3' />
 	<!-- Secondary Elements -->
-	<g id="LT-06022" transform="translate(300, 250)">
+	<g id="LIT" transform="translate(300, 250)">
 		<circle cx="40" cy="40" r="40" stroke="black"
 			stroke-width="3" fill='none' />
 		<text x="30" y="35">
@@ -82,4 +94,20 @@
 			x='300' y='385' />
 	<use id='HV-lit-torre' href='#valvula_simples' 
 			x='350' y='385' />
+	<g id="LIC" transform="translate(400, 150)">
+		<circle cx="40" cy="40" r="40" stroke="black"
+			stroke-width="3" fill='none' />
+		<text x="30" y="35">
+			LIC
+			<tspan x="28" y="55">601</tspan>
+		</text>
+	</g>
+	<g id="LY" transform="translate(625, 260)">
+		<circle cx="40" cy="40" r="40" stroke="black"
+			stroke-width="3" fill='none' />
+		<text x="30" y="35">
+			LY
+			<tspan x="28" y="55">601</tspan>
+		</text>
+	</g>
 </svg>
