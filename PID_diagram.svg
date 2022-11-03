@@ -28,37 +28,29 @@
 			style='fill:black'
 			points='5,0 -5,-10 -5,10' />
 	</defs>
-	<!-- Main pipes -->
-	<g id='linhas'>
-		<path id='antes-bomba' d='M0 600 H20 V540 H140' />
-		<use href='#seta_direita' x='140' y='540' />
-		<path id='bomba-torre' d='M140 500 H300 V450 H400' />
-		<use href='#seta_direita' x='395' y='450' />
-		<path id='pip-valvula' d='M550 450 H1000 V500' />
-	</g>
 	<!-- Main elements -->
-	<use id='HV-prebomba' href='#valvula_simples' x='200' y='485' />
 	<g id='bomba' transform='translate(100, 500)'>
 		<text x='30' y='120'>B01</text>
-		<circle cx="40" cy="40" r='40' fill='none'
-			stroke='black' stroke-width='3'/>
-		<path d='M0 90 L40 40 L80 90 H0'
-			mask='url(#emptycircle)'/>
+		<path d='M0 90 L40 40 L80 90 H0'/>
+		<circle cx="40" cy="40" r='40' style='fill:white'/>
 	</g>
-	<use id='HV-posbomba' href='#valvula_simples' 
-		x='60' y='525' />
+	<path id='antes-bomba' d='M0 600 H20 V540 H140'/>
+	<use href='#seta_direita' x='140' y='540'/>
+	<path id='bomba-torre' d='M140 500 H300 V450 H400'/>
+	<use id='HV-prebomba' href='#valvula_simples' x='200' y='485'/>
+	<use id='HV-posbomba' href='#valvula_simples' x='60' y='525'/>
 	<g id='torre' transform='translate(400,370)'>
-		<rect width='150' height='100' rx='20' ry='20' />
+		<rect width='150' height='100' rx='20' ry='20'/>
 		<text x='65' y='45'>
 			VA
 			<tspan x='60' y='60'>322</tspan>
 		</text>
 	</g>
-	<use href='#valvula_proporcional' x='650' y='435' />
-	<use id='HV-prevalvula' href='#valvula_simples' 
-		x='600' y='435' />
-	<use id='HV-posvalvula' href='#valvula_simples' 
-		x='700' y='435' />
+	<use href='#seta_direita' x='395' y='450'/>
+	<path id='pip-valvula' d='M550 450 H1000 V500'/>
+	<use id='HV-prevalvula' href='#valvula_simples' x='600' y='435'/>
+	<use id='HV-posvalvula' href='#valvula_simples' x='700' y='435'/>
+	<use href='#valvula_proporcional' x='650' y='435'/>
 	<!-- Secondary pipes -->
 	<path id='lit-torre' d='M340 330 V400 H400 H260 V420' />
 	<path id='lic-lit' d='M440 230 V290 H380' stroke-dasharray='10,10' />
