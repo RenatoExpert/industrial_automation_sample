@@ -21,8 +21,7 @@
 			style='fill:white;'
 			points='0,0 0,30 30,0 30,30' />
 		<g id='valvula_proporcional'>
-			<path
-				d='M15 15 V-8 H0 H30 Q15 -38 0 -8 H15' />
+			<path d='M15 15 V-8 H0 H30 Q15 -38 0 -8 H15' />
 			<use x='0' y='0' href='#valvula_simples' />
 		</g>
 		<polygon id='seta_direita'
@@ -31,14 +30,12 @@
 	</defs>
 	<!-- Main pipes -->
 	<g id='linhas'>
-		<polyline id='antes-bomba'
-			points='0,600 20,600 20,540 140,540' />
+		<path id='antes-bomba'
+			d='M0 600 H20 V540 H140' />
 		<use href='#seta_direita' x='140' y='540' />
-		<polyline id='bomba-torre'
-			points='140,500 300,500 300,450 400,450' />
+		<path id='bomba-torre' d='M140 500 H300 V450 H400' />
 		<use href='#seta_direita' x='395' y='450' />
-		<polyline id='pip-valvula'
-			points='550, 450 1000,450 1000,500' />
+		<path id='pip-valvula' d='M550 450 H1000 V500' />
 	</g>
 	<!-- Main elements -->
 	<use id='HV-prebomba' href='#valvula_simples' 
@@ -47,7 +44,7 @@
 		<text x='30' y='120'>B01</text>
 		<circle cx="40" cy="40" r='40' fill='none'
 			stroke='black' stroke-width='3'/>
-		<polyline points='0,90 40,40 80,90 0,90'
+		<path d='M0 90 L40 40 L80 90 H0'
 			mask='url(#emptycircle)'/>
 	</g>
 	<use id='HV-posbomba' href='#valvula_simples' 
@@ -65,24 +62,24 @@
 	<use id='HV-posvalvula' href='#valvula_simples' 
 		x='700' y='435' />
 	<!-- Secondary pipes -->
-	<polyline id='lit-torre'
-		points='340,330 340,400 400,400 260,400 260,420' />
-	<polyline id='lic-lit'
-		points='440,230 440,290, 380,290'
+	<path id='lit-torre'
+		d='M340 330 V400 H400 H260 V420' />
+	<path id='lic-lit'
+		d='M440 230 V290 H380'
 		stroke-dasharray='10,10' />
-	<polyline id='lic-bomb'
-		points='400,190 140,190, 140,505'
+	<path id='lic-bomb'
+		points='M400 190 H140 V505'
 		stroke-dasharray='10,10' />
 	<polyline id='fy-valve'
 		points='665,340 665,415' />
 	<path id='fy-valve-pneumatic'
 		d='M650 360 L680 350	M650 370 L680 360
 		 M650 390 L680 380	M650 400 L680 390' />
-	<polyline id='fy-lic'
-		points='665,260 665,190 480,190'
+	<path id='fy-lic'
+		d='M665 260 V190 H480'
 		stroke-dasharray='10,10' />
-	<polyline id='lic-ft'
-		points='440,150 440,100 840,100 840,260'
+	<path id='lic-ft'
+		d='M440 150 V100 H840 V260'
 		stroke-dasharray='10,10' />
 	<path id='fy-valve'
 		d='	M780 450 V300 H800
