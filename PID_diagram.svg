@@ -30,11 +30,11 @@
 	</defs>
 	<!-- Main pipes -->
 	<g id='linhas'>
-		<path id='antes-bomba' d='M0 600 H20 V540 H140' />
+		<path id='antes-bomba' d='M0 600 H20 V540 H140 Z' />
 		<use href='#seta_direita' x='140' y='540' />
-		<path id='bomba-torre' d='M140 500 H300 V450 H400' />
+		<path id='bomba-torre' d='M140 500 H300 V450 H400 Z' />
 		<use href='#seta_direita' x='395' y='450' />
-		<path id='pip-valvula' d='M550 450 H1000 V500' />
+		<path id='pip-valvula' d='M550 450 H1000 V500 Z' />
 	</g>
 	<!-- Main elements -->
 	<use id='HV-prebomba' href='#valvula_simples' x='200' y='485' />
@@ -42,7 +42,7 @@
 		<text x='30' y='120'>B01</text>
 		<circle cx="40" cy="40" r='40' fill='none'
 			stroke='black' stroke-width='3'/>
-		<path d='M0 90 L40 40 L80 90 H0'
+		<path d='M0 90 L40 40 L80 90 H0 Z'
 			mask='url(#emptycircle)'/>
 	</g>
 	<use id='HV-posbomba' href='#valvula_simples' 
@@ -60,16 +60,16 @@
 	<use id='HV-posvalvula' href='#valvula_simples' 
 		x='700' y='435' />
 	<!-- Secondary pipes -->
-	<path id='lit-torre' d='M340 330 V400 H400 H260 V420' />
-	<path id='lic-lit' d='M440 230 V290 H380' stroke-dasharray='10,10' />
-	<path id='lic-bomb' d='M400 190 H140 V505' stroke-dasharray='10,10' />
+	<path id='lit-torre' d='M340 330 V400 H400 H260 V420 Z' />
+	<path id='lic-lit' d='M440 230 V290 H380 Z' stroke-dasharray='10,10' />
+	<path id='lic-bomb' d='M400 190 H140 V505 Z' stroke-dasharray='10,10' />
 	<polyline id='fy-valve' points='665,340 665,415' />
 	<path id='fy-valve-pneumatic' d='
 		M650 360 L680 350 M650 370 L680 360
-		M650 390 L680 380 M650 400 L680 390' />
-	<path id='fy-lic' d='M665 260 V190 H480' stroke-dasharray='10,10' />
-	<path id='lic-ft' d='M440 150 V100 H840 V260' stroke-dasharray='10,10' />
-	<path id='fy-valve' d='M780 450 V300 H800 M900 450 V300 H880' />
+		M650 390 L680 380 M650 400 L680 390 Z' />
+	<path id='fy-lic' d='M665 260 V190 H480 Z' stroke-dasharray='10,10' />
+	<path id='lic-ft' d='M440 150 V100 H840 V260 Z' stroke-dasharray='10,10' />
+	<path id='fy-valve' d='M780 450 V300 H800 M900 450 V300 H880 Z' />
 	<!-- Secondary Elements -->
 	<g id="LIT" transform="translate(300, 250)">
 		<circle cx="40" cy="40" r="40" />
@@ -104,6 +104,6 @@
 	<g id='fe'>
 		<rect x='830' y='430' width='20' height='40'
 			style='fill:white;stroke:none' />
-		<path d='M830 470 V430 M850 470 V430' />
+		<path d='M830 470 V430 M850 470 V430 Z' />
 	</g>
 </svg>
