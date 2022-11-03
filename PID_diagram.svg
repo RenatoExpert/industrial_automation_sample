@@ -16,7 +16,7 @@
 		<g id='valvula_proporcional'>
 			<path
 				style='fill:none;stroke:black;stroke-width:3'
-				d='M15 15 L15 -8 M0 -8 L30 -8 Q 15 -38 0 -8 L15 -8' />
+				d='M15 15 V-8 H0 H30 Q15 -38 0 -8 H15' />
 			<use x='0' y='0' href='#valvula_simples' />
 		</g>
 		<polygon id='seta_direita'
