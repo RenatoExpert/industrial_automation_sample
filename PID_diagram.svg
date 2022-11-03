@@ -90,8 +90,8 @@
 		stroke-dasharray='10,10'
 		style='fill:none;stroke:black;stroke-width:3' />
 	<path id='fy-valve'
-		d='	M780 450 L780 300 L800 300
-			M900 450 L900 300 L880 300'
+		d='	M780 450 V300 H800
+			M900 450 V300 H880'
 		style='fill:none;stroke:black;stroke-width:3' />
 	<!-- Secondary Elements -->
 	<g id="LIT" transform="translate(300, 250)">
