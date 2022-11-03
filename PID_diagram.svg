@@ -134,8 +134,8 @@
 		<rect x='830' y='430' fill='white'
 			width='20' height='40' />
 		<path
-			d='	M830 470 L830 430
-				M850 470 L850 430'
+			d='	M830 470 V430
+				M850 470 V430'
 			style='fill:none;stroke:black;stroke-width:3' />
 	</g>
 </svg>
