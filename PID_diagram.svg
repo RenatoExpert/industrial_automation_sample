@@ -4,6 +4,13 @@
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:svg="http://www.w3.org/2000/svg">
 	<!-- Some models to be used -->
+	<style>
+		polygon, polyline, path, rect circle {
+			fill: none;
+			stroke: black;
+			stroke-width: 3px;
+		}
+	</style>
 	<defs>
 		<mask id='emptycircle'>
 			<rect x='0' y='0' width='100' height='100'
@@ -11,30 +18,27 @@
 			<circle r='40' cx='40' cy='40' fill='black'/>
 		</mask>
 		<polygon id='valvula_simples'
-			style='fill:white;stroke:black;stroke-width:3'
+			style='fill:white;'
 			points='0,0 0,30 30,0 30,30' />
 		<g id='valvula_proporcional'>
 			<path
-				style='fill:none;stroke:black;stroke-width:3'
 				d='M15 15 V-8 H0 H30 Q15 -38 0 -8 H15' />
 			<use x='0' y='0' href='#valvula_simples' />
 		</g>
 		<polygon id='seta_direita'
+			style='fill:black'
 			points='5,0 -5,-10 -5,10' />
 	</defs>
 	<!-- Main pipes -->
 	<g id='linhas'>
 		<polyline id='antes-bomba'
-			points='0,600 20,600 20,540 140,540'
-			style='fill:none;stroke:black;stroke-width:3' />
+			points='0,600 20,600 20,540 140,540' />
 		<use href='#seta_direita' x='140' y='540' />
 		<polyline id='bomba-torre'
-			points='140,500 300,500 300,450 400,450'
-			style='fill:none;stroke:black;stroke-width:3' />
+			points='140,500 300,500 300,450 400,450' />
 		<use href='#seta_direita' x='395' y='450' />
 		<polyline id='pip-valvula'
-			points='550, 450 1000,450 1000,500'
-			style='fill:none;stroke:black;stroke-width:3' />
+			points='550, 450 1000,450 1000,500' />
 	</g>
 	<!-- Main elements -->
 	<use id='HV-prebomba' href='#valvula_simples' 
@@ -44,14 +48,12 @@
 		<circle cx="40" cy="40" r='40' fill='none'
 			stroke='black' stroke-width='3'/>
 		<polyline points='0,90 40,40 80,90 0,90'
-			style='fill:none;stroke:black;stroke-width:3' 
 			mask='url(#emptycircle)'/>
 	</g>
 	<use id='HV-posbomba' href='#valvula_simples' 
 		x='60' y='525' />
 	<g id='torre' transform='translate(400,370)'>
-		<rect width='150' height='100' rx='20' ry='20'
-			style='fill:none;stroke-width:3;stroke:black' />
+		<rect width='150' height='100' rx='20' ry='20' />
 		<text x='65' y='45'>
 			VA
 			<tspan x='60' y='60'>322</tspan>
@@ -64,39 +66,30 @@
 		x='700' y='435' />
 	<!-- Secondary pipes -->
 	<polyline id='lit-torre'
-		points='340,330 340,400 400,400 260,400 260,420'
-		style='fill:none;stroke:black;stroke-width:3' />
+		points='340,330 340,400 400,400 260,400 260,420' />
 	<polyline id='lic-lit'
 		points='440,230 440,290, 380,290'
-		stroke-dasharray='10,10'
-		style='fill:none;stroke:black;stroke-width:3' />
+		stroke-dasharray='10,10' />
 	<polyline id='lic-bomb'
 		points='400,190 140,190, 140,505'
-		stroke-dasharray='10,10'
-		style='fill:none;stroke:black;stroke-width:3' />
+		stroke-dasharray='10,10' />
 	<polyline id='fy-valve'
-		points='665,340 665,415'
-		style='fill:none;stroke:black;stroke-width:3' />
+		points='665,340 665,415' />
 	<path id='fy-valve-pneumatic'
 		d='M650 360 L680 350	M650 370 L680 360
-		M650 390 L680 380	M650 400 L680 390'
-		style='fill:none;stroke:black;stroke-width:3' />
+		 M650 390 L680 380	M650 400 L680 390' />
 	<polyline id='fy-lic'
 		points='665,260 665,190 480,190'
-		stroke-dasharray='10,10'
-		style='fill:none;stroke:black;stroke-width:3' />
+		stroke-dasharray='10,10' />
 	<polyline id='lic-ft'
 		points='440,150 440,100 840,100 840,260'
-		stroke-dasharray='10,10'
-		style='fill:none;stroke:black;stroke-width:3' />
+		stroke-dasharray='10,10' />
 	<path id='fy-valve'
 		d='	M780 450 V300 H800
-			M900 450 V300 H880'
-		style='fill:none;stroke:black;stroke-width:3' />
+			M900 450 V300 H880' />
 	<!-- Secondary Elements -->
 	<g id="LIT" transform="translate(300, 250)">
-		<circle cx="40" cy="40" r="40" stroke="black"
-			stroke-width="3" fill='none' />
+		<circle cx="40" cy="40" r="40" />
 		<text x="30" y="35">
 			LIT
 			<tspan x="28" y="55">601</tspan>
@@ -107,24 +100,21 @@
 	<use id='HV-lit-torre' href='#valvula_simples' 
 			x='350' y='385' />
 	<g id="LIC" transform="translate(400, 150)">
-		<circle cx="40" cy="40" r="40" stroke="black"
-			stroke-width="3" fill='none' />
+		<circle cx="40" cy="40" r="40" />
 		<text x="30" y="35">
 			LIC
 			<tspan x="28" y="55">601</tspan>
 		</text>
 	</g>
 	<g id="FY" transform="translate(625, 260)">
-		<circle cx="40" cy="40" r="40" stroke="black"
-			stroke-width="3" fill='none' />
+		<circle cx="40" cy="40" r="40" />
 		<text x="30" y="35">
 			FY
 			<tspan x="28" y="55">601</tspan>
 		</text>
 	</g>
 	<g id="FIT" transform="translate(800, 260)">
-		<circle cx="40" cy="40" r="40" stroke="black"
-			stroke-width="3" fill='none' />
+		<circle cx="40" cy="40" r="40" />
 		<text x="30" y="35">
 			FIT
 			<tspan x="28" y="55">601</tspan>
@@ -135,7 +125,6 @@
 			width='20' height='40' />
 		<path
 			d='	M830 470 V430
-				M850 470 V430'
-			style='fill:none;stroke:black;stroke-width:3' />
+				M850 470 V430' />
 	</g>
 </svg>
